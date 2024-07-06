@@ -1,0 +1,222 @@
+/* Font open sans*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+/* Font inter*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-principal: #f9fbfd;
+  --color-secundario: #0a3871;
+  --color-secundario-opacidad: #2c4b72a4;
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--color-principal);
+  font-family: var(--font-inter);
+}
+.oculto {
+  display: none;
+}
+
+.header {
+  padding: 1% 0;
+}
+
+.main {
+  padding: 3% 12%;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+/* Estilos para la seccion de encriptacion */
+.seccion__encriptacion {
+  width: 70%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#texto__ingresado {
+  width: 80%;
+  height: 100%;
+  color: var(--color-secundario);
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  outline: none;
+  resize: none;
+}
+
+#texto__ingresado::placeholder {
+  color: var(--color-secundario-opacidad);
+  font-style: var(--font-inter);
+  font-size: 1.2rem;
+}
+
+.seccion__encriptacion__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.seccion__encriptacion__validación {
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #666464;
+}
+
+.seccion__encriptacion__botones {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.seccion__encriptacion__botones button {
+  font-size: 1rem;
+  padding: 3% 13%;
+  border: 1px solid var(--color-secundario);
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s all;
+}
+
+.btn-1 {
+  color: var(--color-principal);
+  background-color: #0a3871;
+}
+
+.btn-2 {
+  color: var(--color-secundario);
+  background-color: var(--coor-principal);
+}
+/*Estilos para el aside donde se mostrara el resultado*/
+.mostrar__resultados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #bebebe, -5px -5px 10px #ffffff;
+  padding: 20px;
+  width: 400px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+
+.resultado__imagen {
+  width: 90%;
+  height: auto;
+}
+
+.mostrar__resultados__aviso {
+  text-align: center;
+  color: #5a5858;
+  margin-top: 20px;
+}
+
+.mostrar__resultados__aviso h2 {
+  font-size: 1.5em;
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.mostrar__resultados__aviso p {
+  font-size: 1em;
+  margin: 10px 0 0;
+  word-wrap: break-word;
+}
+
+.resultado {
+  width: 400px;
+  padding: 1%;
+  color: #5a5858;
+  text-align: left;
+  margin-top: 20px;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+#copiarBoton {
+  margin-top: 20px;
+  padding: 3% 15%;
+  background-color: var(--color-secundario);
+  color: var(--color-principal);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#copiarBoton.oculto {
+  display: none;
+}
+
+/*Estilos para el footer */
+
+.footer {
+  color: var(--color-principal);
+  font-family: var(--font-open-sans);
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: var(--color-secundario);
+  padding: 0.4% 0;
+  text-align: center;
+  display: block;
+  bottom: 0;
+}
+
+/* Estilos para tableta */
+
+@media (max-width: 900px) {
+  .main {
+    padding: 6% 1%;
+    flex-direction: column;
+  }
+
+  #texto__ingresado {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .resultado__imagen {
+    display: none;
+  }
+
+  .seccion__encriptacion {
+    width: 90%;
+  }
+
+  .seccion__encriptacion__botones {
+    width: 100%;
+  }
+
+  .mostrar__resultados {
+    width: 90%;
+    height: max-content;
+    min-height: initial;
+  }
+
+  .resultado {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  .seccion__encriptacion__botones button {
+    padding: 3% 10%;
+  }
+
+  .mostrar__resultados__aviso h2 {
+    font-size: 1.2rem;
+  }
+}
